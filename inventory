@@ -1,0 +1,2 @@
+[servers]
+BDG-Ubuntu ansible_host=172.17.220.36 ansible_user=diana ansible_ssh_private_key_file=/home/diana/.ssh/ansible1_key

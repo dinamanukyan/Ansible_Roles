@@ -1,0 +1,5 @@
+# handlers file for nginx_setup
+- name: Restart NGINX
+  service:
+    name: nginx
+    state: restarted

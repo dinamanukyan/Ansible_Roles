@@ -1,0 +1,19 @@
+# tasks file for nginx_setup
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install NGINX
+  apt:
+    name: nginx
+    state: present
+
+- name: Replace the default HTML page
+  copy:
+    content: "Hello BDG!"
+    dest: /var/www/html/index.html
+    owner: www-data
+    group: www-data
+    mode: '0644'
+  notify: Restart NGINX
